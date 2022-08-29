@@ -1,0 +1,47 @@
+body .section-1 .container .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .section-1 .container .row .social-button {
+  width: 20rem;
+}
+
+body .section-1 .container .row #header {
+  font-size: 2rem;
+}
+
+body .section-1 .container .row #text {
+  font-size: 1.5rem;
+}
+
+body .section-1 .container .row .hr-line {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+body .section-1 .container .row #header-hr-line {
+  font-size: 1.4rem;
+}
+
+body .section-2 .container .input-row {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+body .section-2 .container .input-row .input-group {
+  width: 20rem;
+}
+/*# sourceMappingURL=style.css.map */

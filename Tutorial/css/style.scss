@@ -1,0 +1,40 @@
+* {
+    // background-color: red;
+}
+
+body {
+    .section-1 {
+        .container {
+            .row {
+                flex-direction: column;
+                .social-button {
+                    width: 20rem;
+                }
+                #header {
+                    font-size: 2rem;
+                }
+                #text {
+                    font-size: 1.5rem;
+                }
+                .hr-line {
+                    display: flex !important;
+                    flex-direction: row !important;
+                    align-items: center !important;
+                }
+                #header-hr-line {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .section-2 {
+        .container {
+            .input-row {
+                flex-direction: column !important;
+                .input-group {
+                    width: 20rem
+                }
+            }
+        }
+    }
+}

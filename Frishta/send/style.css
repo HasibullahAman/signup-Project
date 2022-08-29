@@ -1,0 +1,22 @@
+#body{
+	direction:ltr;
+}
+
+#user{
+
+	background:rgba(128, 0, 128, 0.295);
+	text-align:center;
+	width:300px;
+	height:400px;
+	margin:auto;
+	padding:10px;
+	border-radius:5px;
+
+}
+#user.input{
+  padding:8px;
+  width:280px;
+  margin:5px 0;
+  font-family:tahoma;
+	
+}
