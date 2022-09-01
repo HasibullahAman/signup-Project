@@ -5,3 +5,4 @@ I did
       Create Database
       Connect database
       read data from register.php
+      connect and get data from db and login page
