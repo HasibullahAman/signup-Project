@@ -17,6 +17,7 @@
 </head>
 
 <body class="hold-transition login-page">
+    <!-- i just add php code -->
     <?php
     include('dbcon.php');
     if(isset($_POST['submit'])){
