@@ -14,7 +14,7 @@
 
 <body>
     <?php
-    include('dbcon.php'); 
+    include('dbemail.php'); 
         if(isset($_POST['submit'])){
             $Name =mysqli_real_escape_string($con,$_POST['Name']);
             $Email = mysqli_real_escape_string($con,$_POST['Email']);
@@ -24,9 +24,10 @@
             // is pass comper or not
             $pass = password_hash($Password, PASSWORD_BCRYPT);
             $cPass = password_hash($cPassword, PASSWORD_BCRYPT);
-
+            // generate a uniqid code
+            $token = bin2hex(random_bytes(15));
             // is email exists
-            $emailquery = "SELECT * FROM ragistaritions WHERE Email = '$Email' ";
+            $emailquery = "SELECT * FROM regis WHERE Email = '$Email' ";
             $query = mysqli_query($con,$emailquery);
 
             $emailcount = mysqli_num_rows($query);
@@ -38,7 +39,7 @@
                 <?php
             }else{
                 if($Password === $cPassword){
-                    $insertquery = "INSERT INTO ragistaritions (Name,Email,Phone,Password,cPassword) VALUES ('$Name','$Email','$Phone','$pass','$cPass')";
+                    $insertquery = "INSERT INTO regis (Name,Email,Phone,Password,cPassword,token,status) VALUES ('$Name','$Email','$Phone','$pass','$cPass','$token','inactive')";
                     $iquery = mysqli_query($con,$insertquery);
                     if($iquery){
                         ?>
@@ -84,7 +85,7 @@
         <section class="section-2">
             <div class="container">
                 <div class="row">
-                    <form action="" method="POST" class="d-flex align-items-center input-row">
+                    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST" class="d-flex align-items-center input-row">
                         <div class="input-group mt-1 py-2">
                             <span class="input-group-text"><img src="bootstrap-icons/person.svg" alt=""></span>
                             <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
